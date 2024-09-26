@@ -1,6 +1,24 @@
----
----
-<div>
-<p>Footer - tilføj footerindhold</p>
-</div>
-  
+<article class="relative">
+    <div class="fixed bottom-2 right-2 px-[2.6vw] py-[.5vw] border-black rounded-[50%] border-2 " id="digitalClock">00:00</div>
+ </article>
+
+ <article class="relative">
+    <div class="fixed bottom-2 left-2  ">55.67611°N 12.56833°E
+    </div>
+ </article>
+ 
+ 
+ 
+    <script>
+   function updateClock() {
+     const now = new Date(); // Get the current time
+     const hours = String(now.getHours()).padStart(2, '0'); // Get hours and pad with 0 if needed
+     const minutes = String(now.getMinutes()).padStart(2, '0'); // Get minutes and pad with 0 if needed
+     const timeString = `${hours}:${minutes}`; // Format time as HH:MM
+     document.getElementById('digitalClock').textContent = timeString; // Update clock element
+   }
+ 
+   // Update the clock every second
+   setInterval(updateClock, 1000);
+   updateClock(); // Initial call to display clock immediately
+ </script>

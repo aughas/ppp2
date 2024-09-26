@@ -1,5 +1,31 @@
 ---
+// Få adgang til `variant`, `size`, og `href` fra props
+const { variant = "primary", size = "medium", href } = Astro.props;
+
+// Definér knap-styling
+const buttonStyling = "px-[2.6vw] py-[.5vw] rounded-[50%] border-2 transition ease-in-out duration-500 hover:text-white";
+const variantClasses = {
+  primary: "text-black border-black hover:bg-black",
+  secondary: "text-[var(--offwhite)] border-[var(--orange)] hover:bg-[var(--orange)]",
+  outlined: "text-[var(--greendark)] border-[var(--orange)] hover:bg-[var(--orange)] hover:text-[var(--greendark)]",
+};
+const sizeClasses = {
+  large: "text-4xl",
+  medium: "text-2xl",
+  small: "text-xs",
+};
 ---
+
 <div>
-    <button class="border-2 border-black"><slot /></button>
+  {
+    href ? (
+      <a href={href} class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
+        <slot />
+      </a>
+    ) : (
+      <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
+        <slot />
+      </button>
+    )
+  }
 </div>

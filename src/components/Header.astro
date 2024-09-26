@@ -1,5 +1,51 @@
 ---
+import Link from "../components/Link.astro";
+import Button from "./Button.astro";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div :class="{ : !isIndexPage, 'bg-gradient-to-r to-offwhite': isIndexPage }">
+  <div x-data="{ showmenu: false }" class="fixed top-0 w-full z-50">
+
+      <!-- Navbar (logo and burger button) -->
+      <div id="navbar" class="relative flex flex-row justify-between  px-4 py-2 lg:px-8 lg:py-4">
+        <!-- Desktop navigation -->
+        <nav id="desktopmenu" class="hidden lg:flex flex-row items-start relative z-10">
+          <ul class="flex flex-row  gap-2">
+            <li><Button variant="primary" size="small" href="#hero">Home</Button></li>
+            <li><Button variant="primary" size="small" href="#projects">Projects</Button></li>
+            <li><Button variant="primary" size="small" href="#about">About</Button></li>
+          </ul>
+        </nav>
+
+        <!-- abt -->
+        <div id="abt" class="text-l gap-10 relative z-10 flex flex-row items-start">
+            <article class="w-40">
+                <h1>About me</h1>
+                <p>I'm August Hasselblad, an MMD-student and artist, working freelance with graphic design</p>
+            </article>
+            <article class="w-40">
+                <h1>Contact me</h1>
+                <p>Copenhagen, Denmark
+                    Available for internship. E:<a href="mailto:augu.brem@gmail.com">augu.brem@gmail.com</a>
+                    +46721770889</p>
+            </article>
+          </div>
+
+        <!-- Burger menu button for mobile -->
+        <button id="burgermenu" class="lg:hidden flex flex-col justify-center items-center w-8 h-8 z-50 " x-on:click="showmenu = !showmenu">
+          <!-- Show burger lines if menu is closed -->
+          <span :class="{ 'rotate-45 translate-y-2': showmenu }" class="block w-6 h-0.5 bg-black mb-1 transition-all duration-300"></span>
+          <span :class="{ 'opacity-0': showmenu }" class="block w-6 h-0.5 bg-black mb-1 transition-all duration-300"></span>
+          <span :class="{ '-rotate-45 -translate-y-2': showmenu }" class="block w-6 h-0.5 bg-black transition-all duration-300"></span>
+        </button>
+      </div>
+    <!-- Mobile navigation with full-screen coverage and padding -->
+    <nav id="mobilmenu" class="fixed top-0 left-0 w-full h-full bg-w flex flex-col justify-center items-center z-40 p-4" x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
+      <ul class="w-full">
+        <li class="text-center py-4 border-y-2 border-[var(--offwhite)] text-[var(--offwhite)]"><Link href="#home">Home</Link></li>
+        <li class="text-center py-4 border-b-2 border-[var(--offwhite)] text-[var(--offwhite)]"><Link href="#Projcets">Projects</Link></li>
+        <li class="text-center py-4 border-b-2 border-[var(--offwhite)] text-[var(--offwhite)]"><Link href="#About">About</Link></li>
+      </ul>
+    </nav>
+  </div>
 </div>

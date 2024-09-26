@@ -6,10 +6,27 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
+<section id="hero" class="h-screen relative bg-center bg-no-repeat bg-contain" style="background-image: url(/hero.png); background-attachment: fixed;">
+<h1>August Hasselblad</h1>
+</section>
+
+<section id="projects" class="relative bg-center bg-no-repeat bg-contain h-screen" style="background-image: url(/hero.png); background-attachment: fixed;">
+	<article class="grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden max-w-screen-xl mx-auto px-2">
+		<img src="bla.jpg" alt="" class=" h-96 lg:object-cover transition-all hover:scale-125" >
+		<img src="gul.jpg" alt="" class="h-96 lg:object-cover transition-all hover:scale-125">
+		<img src="rod.jpg" alt="" class="h-96 lg:object-cover transition-all hover:scale-125">
+		<img src="idk.jpg" alt="" class="h-96 lg:object-cover transition-all hover:scale-125">
 	</article>
+</section>
+
+
+	<section id= "about"class="grid lg:grid-cols-2 max-w-3xl mx-auto gap-8 mt-32">
+		<article>
+			<h3 class="lg:text-right font-medium">Forfatteren</h3>
+			<img src="rod.jpg" alt="" class="w-96 h-80 object-cover">
+		</article>
+		<h3 class="lg:mt-6 font-medium">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
+			Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.
+			</h3>
+		</section>
 </MainLayout>
