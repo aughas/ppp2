@@ -10,7 +10,7 @@ import Button from "./Button.astro";
       <div id="navbar" class="relative flex flex-row justify-between  px-4 py-2 lg:px-8 lg:py-4">
         <!-- Desktop navigation -->
         <nav id="desktopmenu" class="hidden lg:flex flex-row items-start relative z-10">
-          <ul class="flex flex-row  gap-2">
+          <ul class="flex flex-row  gap-2 ">
             <li><Button variant="primary" size="small" href="#hero">Home</Button></li>
             <li><Button variant="primary" size="small" href="#projects">Projects</Button></li>
             <li><Button variant="primary" size="small" href="#about">About</Button></li>
@@ -19,12 +19,12 @@ import Button from "./Button.astro";
 
         <!-- abt -->
         <div id="abt" class="text-l gap-10 relative z-10 flex flex-row items-start">
-            <article class="w-40">
-                <h1>About me</h1>
+            <article class="w-40 ">
+                <h1 class="font">About me</h1>
                 <p>I'm August Hasselblad, an MMD-student and artist, working freelance with graphic design</p>
             </article>
             <article class="w-40">
-                <h1>Contact me</h1>
+                <h1 class="font">Contact me</h1>
                 <p>Copenhagen, Denmark
                     Available for internship. E:<a href="mailto:augu.brem@gmail.com">augu.brem@gmail.com</a>
                     +46721770889</p>
@@ -49,3 +49,12 @@ import Button from "./Button.astro";
     </nav>
   </div>
 </div>
+
+
+<style>
+    .font{
+        font-family: 'Playfair Display', serif;
+        font-size: larger;
+        font-style: italic;
+    }
+</style>

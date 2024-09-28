@@ -6,28 +6,27 @@ import { Image } from 'astro:assets';
 
 ---
 <MainLayout title="Titel">
-<section id="hero" class="h-screen relative bg-center bg-no-repeat bg-contain bg_hero ">
-<h1></h1>
+<section id="hero" class="h-screen relative bg-center bg-no-repeat bg-contain bg_hero load2">
 </section>
 
-<section id="projects" class="relative bg-center bg-no-repeat bg-contain bg_projects z-10">
+<section id="projects" class="relative bg-center bg-no-repeat bg-contain bg_projects z-10 load3">
+	<h1 class="text-center sticky top-0 z-50">Graphic work</h1>
 	<article class="grid grid-cols-1 lg:grid-cols-12 overflow-hidden mx-auto ">
-		<img src="spine.webp" alt="" class="  lg:object-cover transition-all hover:scale-125 lg:col-start-3 lg:col-span-2 lg:mt-20" >
-		<img src="2.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-9 lg:col-span-2">
-		<div>
-			<div>
-				<img src="yaki1.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-6 lg:col-span-2 lg:mt-0">
-				<img src="yaki2.webp" alt="">
-				<img src="yaki3.webp" alt="">
-				<img src="yaki4.webp" alt="">
-				<img src="yaki5.webp" alt="">
-				<img src="yaki6.webp" alt="">
+		<img src="spine.webp" alt="" class="m-2 lg:m-0  lg:object-cover transition-all lg:col-start-3 lg:col-span-2 lg:mt-20 lg:hover:scale-150" >
+		<img src="2.webp" alt="" class="m-2 lg:m-0 lg:object-cover transition-all lg:col-start-9 lg:col-span-2">
+		<div class="m-2 lg:m-0 lg:object-cover transition-all lg:col-start-6 lg:col-span-2 lg:mt-0">
+			<div class="yaki-container">
+				<img src="yaki1.webp" alt="" class="yaki-main">
+				<img src="yaki2.webp" alt="" class="yaki-fan">
+				<img src="yaki4.webp" alt="" class="yaki-fan">
+				<img src="yaki5.webp" alt="" class="yaki-fan">
+				<img src="yaki6.webp" alt="" class="yaki-fan">
 			</div>
 		</div>
-		<img src="1.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-3 lg:col-span-3">
-		<div class="lg:col-start-8 lg:col-span-3 flip-container">
+		<img src="inlay.webp" alt="" class=" lg:object-cover transition-all lg:col-start-3 lg:col-span-3 lg:mt-40">
+		<div class="m-2 lg:m-0 lg:col-start-8 lg:col-span-3 flip-container lg:mt-20">
 			<div class="flip-card">
-				<img src="front.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 front">
+				<img src="front.webp" alt="" class=" lg:object-cover transition-all front">
 				<img src="back.webp" alt="" class="back">
 			</div>
 		</div>
@@ -36,30 +35,30 @@ import { Image } from 'astro:assets';
   
 
 <section id="projects3" class="relative bg-center bg-no-repeat bg-contain bg_projects z-0">
+	<h1 class="text-center sticky top-0 z-50">Paintings</h1>
 	<article class="grid grid-cols-1 lg:grid-cols-12 overflow-hidden mx-auto ">
-		<img src="4.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-9 lg:col-span-2">
-		<img src="6.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-3 lg:col-span-4">
-		<img src="5.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-8 lg:col-span-2">
-		<img src="7.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-3 lg:col-span-3">
-		<img src="8.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-8 lg:col-span-3">
-		<img src="9.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-6 lg:col-span-2">
+		<img src="6.webp" alt="" class="m-2 lg:m-0 lg:object-cover transition-all lg:col-start-3 lg:col-span-4 lg:mt-40">
+		<img src="4.webp" alt="" class="m-2 lg:m-0 lg:object-cover transition-all lg:col-start-9 lg:col-span-2">
+		<img src="9.webp" alt="" class="m-2 lg:m-0 lg:object-cover transition-all lg:col-start-3 lg:col-span-3 lg:mt-40">
+		<img src="demon.webp" alt="" class="m-2 lg:m-0 lg:object-cover transition-all lg:col-start-8 lg:col-span-2">
+		<img src="faces.webp" alt="" class="m-2 lg:m-0 lg:object-cover transition-all lg:col-start-4 lg:col-span-2 lg:mt-20">
+		<img src="mosh.webp" alt="" class="m-2 lg:m-0 lg:object-cover transition-all lg:col-start-8 lg:col-span-3">
+		<img src="prints.png" alt="" class="m-2 lg:m-0 lg:object-cover transition-all lg:col-start-5 lg:col-span-3">
 	</article>
 </section>
 
-<!-- gör klart projects section först -->
+	<section id= "about"class="relative bg-center bg-no-repeat bg-contain h-screen bg_about load4">
+		<div class="grid lg:grid-cols-2 max-w-3xl mx-auto gap-24">	
+			<article class="lg:mt-36 ">
+					<img src="rod.jpg" alt="" class="w-96 h-80 object-cover">
+			</article>
+				<h3 class="lg:mt-36">
+					Hey! I'm a calm, fun, and energetic person who's always driven and inspired by new ideas. Originally from Gothenburg, I now live in Copenhagen, currently in Valby. I'm working part-time as a freelance graphic designer, and part-time at a graffiti-store while studying Multimedia Design at KEA. I’ve also studied painting at Dômen Konstskola.
+I’m passionate about both traditional and digital art, with skills in HTML, CSS, JavaScript, Git, Astro, Figma, Photoshop, and Illustrator.
 
-	<section id= "about"class="relative bg-center bg-no-repeat bg-contain h-screen bg_about ">
-			<div class="grid lg:grid-cols-2 max-w-3xl mx-auto gap-8">
-				
-					<article>
-						<h3 class="lg:text-right font-medium">Forfatteren</h3>
-						<img src="rod.jpg" alt="" class="w-96 h-80 object-cover">
-					</article>
-					<h3 class="lg:mt-6 font-medium">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
-						Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.
-						</h3>
-			</div>
-		</section>
+				</h3>
+		</div>
+	</section>
 </MainLayout>
 
 
@@ -86,8 +85,6 @@ import { Image } from 'astro:assets';
   transition: transform 0.3s ease;
   transform-style: preserve-3d;
 }
-
-/* Front and back images */
 .front, .back {
   position: absolute;
   width: 100%;
@@ -103,6 +100,60 @@ import { Image } from 'astro:assets';
 .flip-container:hover .flip-card {
   transform: rotateY(180deg);
 }
+
+.yaki-container {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+
+
+.yaki-main {
+  position: relative;
+  z-index: 10;
+}
+
+/* Fan images: initially overlap with the main image */
+.yaki-fan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Same width as the main image */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0; /* Hidden initially */
+  transform-origin: left center; /* Make the images fan out from the left */
+  z-index: -1; /* Keeps them behind the main image */
+}
+
+/* When hovering over the container, fan out the images */
+.yaki-container:hover .yaki-fan {
+  opacity: 1;
+}
+
+/* Specific fan-out positions for each image */
+.yaki-container:hover .yaki-fan:nth-child(2) {
+  transform: translateX(100px);
+  z-index: 5;
+}
+
+.yaki-container:hover .yaki-fan:nth-child(3) {
+  transform: translateX(200px);
+  z-index: 4;
+}
+
+.yaki-container:hover .yaki-fan:nth-child(4) {
+  transform: translateX(300px);
+  z-index: 3;
+}
+
+.yaki-container:hover .yaki-fan:nth-child(5) {
+  transform: translateX(400px);
+  z-index: 2;
+}
+
+
+
 </style>
 
 

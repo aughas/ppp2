@@ -12,6 +12,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{Astro.props.title}</title>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body class="flex flex-col min-h-screen ">
 
@@ -23,7 +24,7 @@ const { title } = Astro.props;
 			<slot />
 		</main>
 
-		<footer>
+		<footer class="z-50">
 			<Footer></Footer>
 		</footer>
 			
