@@ -3,30 +3,136 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+
 ---
 <MainLayout title="Titel">
-<section id="hero" class="h-screen relative bg-center bg-no-repeat bg-contain" style="background-image: url(/hero.png); background-attachment: fixed;">
-<h1>August Hasselblad</h1>
+<section id="hero" class="h-screen relative bg-center bg-no-repeat bg-contain bg_hero ">
+<h1></h1>
 </section>
 
-<section id="projects" class="relative bg-center bg-no-repeat bg-contain h-screen" style="background-image: url(/hero.png); background-attachment: fixed;">
-	<article class="grid grid-cols-1 lg:grid-cols-2 gap-6 overflow-hidden max-w-screen-xl mx-auto px-2">
-		<img src="bla.jpg" alt="" class=" h-96 lg:object-cover transition-all hover:scale-125" >
-		<img src="gul.jpg" alt="" class="h-96 lg:object-cover transition-all hover:scale-125">
-		<img src="rod.jpg" alt="" class="h-96 lg:object-cover transition-all hover:scale-125">
-		<img src="idk.jpg" alt="" class="h-96 lg:object-cover transition-all hover:scale-125">
+<section id="projects" class="relative bg-center bg-no-repeat bg-contain bg_projects z-10">
+	<article class="grid grid-cols-1 lg:grid-cols-12 overflow-hidden mx-auto ">
+		<img src="spine.webp" alt="" class="  lg:object-cover transition-all hover:scale-125 lg:col-start-3 lg:col-span-2 lg:mt-20" >
+		<img src="2.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-9 lg:col-span-2">
+		<div>
+			<div>
+				<img src="yaki1.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-6 lg:col-span-2 lg:mt-0">
+				<img src="yaki2.webp" alt="">
+				<img src="yaki3.webp" alt="">
+				<img src="yaki4.webp" alt="">
+				<img src="yaki5.webp" alt="">
+				<img src="yaki6.webp" alt="">
+			</div>
+		</div>
+		<img src="1.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-3 lg:col-span-3">
+		<div class="lg:col-start-8 lg:col-span-3 flip-container">
+			<div class="flip-card">
+				<img src="front.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 front">
+				<img src="back.webp" alt="" class="back">
+			</div>
+		</div>
+	</article>
+</section>
+  
+
+<section id="projects3" class="relative bg-center bg-no-repeat bg-contain bg_projects z-0">
+	<article class="grid grid-cols-1 lg:grid-cols-12 overflow-hidden mx-auto ">
+		<img src="4.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-9 lg:col-span-2">
+		<img src="6.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-3 lg:col-span-4">
+		<img src="5.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-8 lg:col-span-2">
+		<img src="7.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-3 lg:col-span-3">
+		<img src="8.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-8 lg:col-span-3">
+		<img src="9.webp" alt="" class=" lg:object-cover transition-all hover:scale-125 lg:col-start-6 lg:col-span-2">
 	</article>
 </section>
 
+<!-- gör klart projects section först -->
 
-	<section id= "about"class="grid lg:grid-cols-2 max-w-3xl mx-auto gap-8 mt-32">
-		<article>
-			<h3 class="lg:text-right font-medium">Forfatteren</h3>
-			<img src="rod.jpg" alt="" class="w-96 h-80 object-cover">
-		</article>
-		<h3 class="lg:mt-6 font-medium">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
-			Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.
-			</h3>
+	<section id= "about"class="relative bg-center bg-no-repeat bg-contain h-screen bg_about ">
+			<div class="grid lg:grid-cols-2 max-w-3xl mx-auto gap-8">
+				
+					<article>
+						<h3 class="lg:text-right font-medium">Forfatteren</h3>
+						<img src="rod.jpg" alt="" class="w-96 h-80 object-cover">
+					</article>
+					<h3 class="lg:mt-6 font-medium">Sten Simons har en lang foto-karriere bag sig. Det hele startede i 00’erne, da han gik rundt i Pisserenden for at fotografere ungdommens forfald. Det ledte til en række udstillinger, og blev senere til hans først fotobog “Ungdomsdruk - pinlige billeder fra nattelivet.”
+						Derefter tog karrieren fart: Han blev fotojournalist og dokumenterede en masse dagligdagsstof fra Amager på dagbladet “Amagerkaneren.” Sideløbende begyndte han at undervise i foto, og har skrevet et utal af bøger, herunder bestsellerne Scener fra S-toget, Brun mad - en visuel odysse, og lærebogen Fotografering for evnesvage.
+						</h3>
+			</div>
 		</section>
 </MainLayout>
+
+
+<style>
+	.bg_hero{
+		background-image: url(/hero.png); 
+		background-attachment: fixed;
+	}
+	.bg_projects{
+		background-image: url(/projects.png); 
+		background-attachment: fixed;
+	}
+	.bg_about{
+		background-image: url(/about.png); 
+		background-attachment: fixed;
+		
+	}
+
+	/* flip animation */
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+/* Front and back images */
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  backface-visibility: hidden;
+}
+.front {
+  transform: rotateY(0deg); 
+}
+.back {
+  transform: rotateY(180deg);
+}
+.flip-container:hover .flip-card {
+  transform: rotateY(180deg);
+}
+</style>
+
+
+<script>
+	import { inView } from "motion";
+	const inviewelement = document.querySelector(".load");
+	inView(
+		inviewelement, () => {
+			inviewelement.classList.add("slide-top")
+		}
+	)
+
+	const inviewelement2 = document.querySelector(".load2");
+	inView(
+		inviewelement2, () => {
+			inviewelement2.classList.add("fade-in")
+		}
+	)
+
+	const inviewelement3 = document.querySelector(".load3");
+	inView(
+		inviewelement3, () => {
+			inviewelement3.classList.add("fade-in")
+		}
+	)
+
+	const inviewelement4 = document.querySelector(".load4");
+	inView(
+		inviewelement4, () => {
+			inviewelement4.classList.add("fade-in")
+		}
+	)
+</script>
