@@ -3,6 +3,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
+import Tobii from 'tobii';
+import "../styles/tobii.min.css";
+import Flipbook from "../components/Flipbook.astro";
 
 ---
 <MainLayout title="Titel">
@@ -13,7 +16,15 @@ import { Image } from 'astro:assets';
 	<h1 class="text-center sticky top-0 z-50">Graphic work</h1>
 	<article class="grid grid-cols-1 lg:grid-cols-12 overflow-hidden mx-auto ">
 		<img src="spine.webp" alt="" class="m-2 lg:m-0  lg:object-cover transition-all lg:col-start-3 lg:col-span-2 lg:mt-20 lg:hover:scale-150" >
-		<img src="2.webp" alt="" class="m-2 lg:m-0 lg:object-cover transition-all lg:col-start-9 lg:col-span-2">
+		<div class="flex flex-col md:justify-center md:items-end items-start md:gap-5 gap-6 lg:col-start-9 lg:col-span-2">
+			<a href="2.webp" class="lightbox md:w-[365px] w-[95%] h-full">
+				<img
+				  src="2.webp"
+				  alt="gothenburg hardcore punkband cover"
+				  class="shadow-xl mt-12 md:mt-0 hover:scale-105 transition duration-500"
+				/>
+			  </a>
+		</div>
 		<div class="m-2 lg:m-0 lg:object-cover transition-all lg:col-start-6 lg:col-span-2 lg:mt-0">
 			<div class="yaki-container slide">
 				<img src="yaki1.webp" alt="" class="yaki-main">
@@ -61,6 +72,44 @@ I’m passionate about both traditional and digital art, with skills in HTML, CS
 				
 		</div>
 	</section>
+
+	
+
+<!-- lightbox zoom tobii -->
+	  <!-- <div class="flex flex-col md:justify-center md:items-end items-start md:gap-5 gap-6">
+		<a href="yaki1.webp" class="lightbox md:w-[365px] w-[95%] h-full">
+		  <img
+			src="yaki1.webp"
+			alt="Examples with Access (mockup)"
+			class="w-[365px] md:h-[540px] h-[585px] shadow-xl mt-12 md:mt-0 rounded-lg hover:scale-105 transition duration-500"
+		  />
+		</a>
+	  </div>
+
+
+	  <div class="flex flex-col md:justify-center md:items-end items-start md:gap-5 gap-6">
+		<a href="yaki2.webp" class="lightbox md:w-[365px] w-[95%] h-full">
+		  <img
+			src="yaki2.webp"
+			alt="Examples with Access (mockup)"
+			class="w-[365px] md:h-[540px] h-[585px] shadow-xl mt-12 md:mt-0 rounded-lg hover:scale-105 transition duration-500"
+		  />
+		</a>
+	  </div> -->
+
+	  <!-- flipbook test -->
+	  <!-- <div style="position:relative;padding-top:max(60%,324px);width:50%;height:0;">
+		<iframe style="position:absolute;border:none;width:50%;height:50%;left:0;top:0;" 
+				src="https://online.fliphtml5.com/dsupj/fmdx/"  
+				seamless="seamless" scrolling="no" frameborder="0" 
+				allowtransparency="true" allowfullscreen="true" >
+		</iframe>
+	</div> -->
+
+
+	<!-- stulen kod test -->
+	<Flipbook/>
+
 </MainLayout>
 
 
@@ -159,7 +208,12 @@ I’m passionate about both traditional and digital art, with skills in HTML, CS
 </style>
 
 
+<script is:inline src="/tobii.min.js"></script>
+<script defer>
+  const tobii = new Tobii();
+</script>
 <script>
+
 	import { inView } from "motion";
 	const inviewelement = document.querySelector(".slide");
 	inView(
